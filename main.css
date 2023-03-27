@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+    background-image: url('image.png');
+    background-size: cover;
+
+}
+
+html,
+body {
+    height: 100%;
+
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.score {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+.scoreBar {
+    background-color: yellow;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    width: 600px;
+    height: 100px;
+    text-align: center;
+    align-items: flex;
+
+}
+
+.board {
+    border: 1px solid black;
+    background-color: yellow;
+    margin: 5;
+    height: 600px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 70px;
+}
+
+.hole {
+    border: 1px solid black;
+    margin: 5px;
+    background-color: rgb(13, 148, 238);
+    position: relative;
+    overflow: hidden;
+}
+
+.hole .mole {
+    width: 82.5%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    animation: rise .3s ease-out;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateX(-50%) translateY(100%);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0%);
+    }
+}
